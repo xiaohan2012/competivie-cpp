@@ -6,3 +6,6 @@
 - `std:get<i>(tuple)` to get the `i`th element, works also for `pair`
 - external `cmp` function
 
+- use `lower_bound` as binary search
+- use `upper_bound` as index + 1
+- to get the index, use `index - v.begin()`

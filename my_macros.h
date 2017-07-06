@@ -7,12 +7,3 @@ void print_vector(vector<t> v){
   }
   cout << endl;
 }
-
-
-template<typename t1, typename t2>
-void print_vector_pairs(vector<pair<t1, t2>> v){
-  for(auto i: v){
-    cout << i << " ";
-  }
-  cout << endl;
-}
