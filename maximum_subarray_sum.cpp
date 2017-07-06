@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#define REP(i, a, b) for(int i=a; i <= b; i++)
+#include "my_macros.h"
 
 /*
    - INT_MIN, INT_MAX

@@ -1,12 +1,13 @@
-CC=g++
-CFLAGS=-std=c++14 -O2 -Wall
+CXX=g++
+CPPFLAGS=-std=c++11 -O2 -Wall
 ODIR=obj
+DEPS=my_macros.h
 
 %: $(ODIR)/%.o
-	${CC} -o $@ $^ $(CFLAGS)
+	$(CXX) -o $@ $^ $(CPPFLAGS)
 
-$(ODIR)/%.o: %.cpp
-	$(CC) -c -o $@ $< $(CFLAGS)
+$(ODIR)/%.o: %.cpp $(DEPS)
+	$(CXX) -c -o $@ $< $(CPPFLAGS)
 
 .PHONY: clean
 
