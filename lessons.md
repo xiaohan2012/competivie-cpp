@@ -9,6 +9,7 @@
 - much easier solution for maximum subarray sum
 
 # sort and binary search
+
 - `makefile`: use `CXX` instead of `CC`for cpp programs (similar for `CPPFLAGS`)
 - sort `vector` using `sort`, `.begin() and `.end()`. `rbegin()` and `rend()`
 - syntax: `template<typename T> void swap(T& x, T& y)`
@@ -20,4 +21,11 @@
 - use `lower_bound` as binary search
 - use `upper_bound` as index + 1
 - to get the index, use `index - v.begin()`
+
+- jump: another method to search (also logarithmic time)
+  - `k`: current position
+  - `b`: stride to try with `k+b`. 
+    - if fail, then try smaller stride (`b/=2`)
+- integer division like Python: `5/2 = 2`
+- generalization of the jump binary search on finding smallest solution with on arrays like `<F, F, F, F, T, T, T>`
 

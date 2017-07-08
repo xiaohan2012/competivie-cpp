@@ -16,6 +16,15 @@ int bs(vector<int> a, int x){
   return -1;
 }
 
+int bs1(vector<int> a, int x){
+  int k=0, b=a.size()/2;
+  for(; b>=1; b/=2){
+    while((k+b) < a.size() && a[k+b] <= x) k+=b;
+  }
+  if(a[k] == x) return k;
+  else return -1;  
+}
+
 int main(){
   vector<int> a = {4, 1, 2, 0, 5, 0, 9, 1};
   sort(a.begin(), a.end());
@@ -24,6 +33,9 @@ int main(){
   
   cout << "position of 4: " << bs(a, 4) << endl;
   cout << "position of 9: " << bs(a, 9) << endl;
+
+  cout << "position of 4 (jump): " << bs1(a, 4) << endl;
+  cout << "position of 9 (jump): " << bs1(a, 9) << endl;
 
   cout << "position of 4 (lb): " << (lower_bound(a.begin(), a.end(), 4) - a.begin()) << endl;
   cout << "position of 9 (lb): " << (lower_bound(a.begin(), a.end(), 9) - a.begin()) << endl;
