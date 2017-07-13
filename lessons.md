@@ -22,6 +22,8 @@
 - use `upper_bound` as index + 1
 - to get the index, use `index - v.begin()`
 
+## 2nd version of binary search based on jump
+
 - jump: another method to search (also logarithmic time)
   - `k`: current position
   - `b`: stride to try with `k+b`. 
@@ -29,3 +31,81 @@
 - integer division like Python: `5/2 = 2`
 - generalization of the jump binary search on finding smallest solution with on arrays like `<F, F, F, F, T, T, T>`
 
+
+# data structures
+
+## vector
+- `vector<type> a(length, value)` or `vector<type> a(length)` initialized all to zero
+- `.back` and `.front` method
+
+## string
+
+- `substr` and `find`
+
+## set
+
+- `set` based on balanced binary tree, `O(log n)` time
+- `unordered_set` based on hashtable, `O(1)` time
+
+main methods: `insert`, `erase`, `count` (can be used as contains)
+
+
+- similarly for `multiset` and `unordered_multiset`
+
+
+## map
+
+- similarly `map` and `unordered_map`
+- insertion by `m[key]=value`
+- existence by `m.count(key)`
+- if a key does not exist but is requested, automatically added with default value
+- `for(auto p: m)` and `p.first` and `p.second` (`p` is a pair)
+
+## iterators
+
+- iterating vector, set, string using `iterators`
+- an iterator is essentially a pointer
+- `s.begin()` returns a pointer. so to get the value, use `*` to de-reference
+
+## bitset
+- `cout << (s1 & s2) << endl;` using *parenthesis* s1 and s2
+- `bitset<10> bs(string("0101010"))`
+- if length is longer, the zeros are *prepended*
+
+## deque
+
+- change on *both* ends of the list
+- `push_{front|back}` and `pop_{front|back}`
+- comparison to `vector`: `push_front` and `pop_front` not supported
+
+
+## stack
+
+- `push`, `top` and `pop`
+
+## queue
+
+- `push`, `front` and `pop`
+
+## `priority_queue`
+
+- `push`, `top` and `pop`
+- sorted from largset to smallest by default
+- `priority_queue<int> q;`
+- `priority_queue<int,vector<int>,greater<int>> q;`: from smallest to greatest
+
+# complete search
+
+## generating subset
+
+- method 1: review of recursive method
+- method 2: each subset can be represented by a bitset of size `n`
+  - so we iterate through an int varaible `b` from `0` to `(1<<n) - 1` (for example, if `n=3`, then `b` is from `000` to `111`
+  - to check if the `i`th bit is active, use `(1<<i) & b` (neat!)
+
+
+## permutation
+
+- method 1: recursive
+  - selecting the `i`the number a the starting code and recurse on the rest of the sequence
+- method 2: `next_permutation`
