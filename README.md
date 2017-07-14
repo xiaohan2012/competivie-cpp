@@ -109,3 +109,21 @@ main methods: `insert`, `erase`, `count` (can be used as contains)
 - method 1: recursive
   - selecting the `i`the number a the starting code and recurse on the rest of the sequence
 - method 2: `next_permutation`
+
+## backtracking
+
+a technique featured by:
+
+- *incrementally* build a solution
+- abandons a partial solution if not feasible ("backtrack" means "go back")
+
+
+"queen" problem: solved by recursive approach
+
+- a novel way to store which position is possible/impossible
+  - cells in the same column share the same column index
+  - cells in the same left diagonal share the same `x+y` value
+  - similar results for cells in the right diagonal
+  - kinda of "common features" for linked cells
+  - the storage is **linear** instead of quadratic (wow!)
+
