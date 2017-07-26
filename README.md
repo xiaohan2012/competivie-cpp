@@ -78,7 +78,6 @@ main methods: `insert`, `erase`, `count` (can be used as contains)
 - `push_{front|back}` and `pop_{front|back}`
 - comparison to `vector`: `push_front` and `pop_front` not supported
 
-
 ## stack
 
 - `push`, `top` and `pop`
