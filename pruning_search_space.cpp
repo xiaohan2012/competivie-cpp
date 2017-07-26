@@ -8,7 +8,7 @@ using namespace std;
 int path_count(int x, int y, int d, vector<vector<bool>> m, int t){
   int c = 0;
 
-  // ok case
+  // OK!
   if(x == d-1 && y == d-1 && t == d*d)
     return 1;
 
@@ -28,21 +28,21 @@ int path_count(int x, int y, int d, vector<vector<bool>> m, int t){
     return 0;
 
   // vice versa
-  if((y == 0 || m[x][y-1]) && // cannot go down
-     (y == d-1 || m[x][y+1]) &&  // cannot go up
+  if((y == 0 || m[x][y-1]) && // cannot go up
+     (y == d-1 || m[x][y+1]) &&  // cannot go down
      (x > 0 && !m[x-1][y]) && // can go left
      (x < d-1 && !m[x+1][y])) // can go right
     return 0;
   
   vector<int> p = {{-1, 1}};
   for(auto i: p){
-    if(x+i >= 0 && x+i < d){ // move left or right
+    if(x+i >= 0 && x+i < d && !m[x+i][y]){ // move left or right
       m[x+i][y] = true;
       c += path_count(x+i, y, d, m, t+1);
       m[x+i][y] = false;
     }
 
-    if(y+i >= 0 && y+i < d){ // move up or down
+    if(y+i >= 0 && y+i < d && !m[x][y+i]){ // move up or down
       m[x][y+i] = true;
       c += path_count(x, y+i, d, m, t+1);
       m[x][y+i] = false;

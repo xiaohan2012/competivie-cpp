@@ -126,3 +126,8 @@ a technique featured by:
   - kinda of "common features" for linked cells
   - the storage is **linear** instead of quadratic (wow!)
 
+# pruning
+
+- 2d vector, example: `vector<vector<bool>> m(d, vector<bool>(d, false))`
+- [print stacktrace](https://stackoverflow.com/questions/18706496/can-one-use-libsegfault-so-to-get-backtraces-for-sigabrt) or [this for C](https://stackoverflow.com/questions/77005/how-to-generate-a-stacktrace-when-my-gcc-c-app-crashes)
+- tool gdb: `run` and `where` to print stacktrace
