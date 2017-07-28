@@ -131,3 +131,4 @@ a technique featured by:
 - 2d vector, example: `vector<vector<bool>> m(d, vector<bool>(d, false))`
 - [print stacktrace](https://stackoverflow.com/questions/18706496/can-one-use-libsegfault-so-to-get-backtraces-for-sigabrt) or [this for C](https://stackoverflow.com/questions/77005/how-to-generate-a-stacktrace-when-my-gcc-c-app-crashes)
 - tool gdb: `run` and `where` to print stacktrace
+- one cause for *segmentatio fault*: recursion does not terminate
