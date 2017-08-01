@@ -135,4 +135,6 @@ a technique featured by:
 
 # dynamic programming
 
-- use `min` function to update
+- use `min/max` function to update
+- problem: path in a grid, initial state for first row and column
+- initialize 2d vectors with values: `vector<vector<int>> m {{...}, ..., {...}}`
