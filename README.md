@@ -137,4 +137,8 @@ a technique featured by:
 
 - use `min/max` function to update
 - problem: path in a grid, initial state for first row and column
-- initialize 2d vectors with values: `vector<vector<int>> m {{...}, ..., {...}}`
+- initialize 2d vectors with values: `vector<vector<int>> m {{...}, ..., {...}}
+- running time of dp for knapsack: `O(nW)` or `O(nS)`
+  - `W` capacity
+  - `S` sum of values of all items
+  - [pseudo-polynomial](https://en.wikipedia.org/wiki/Pseudo-polynomial_time): running time in the *numeric value* of the input (not size)
