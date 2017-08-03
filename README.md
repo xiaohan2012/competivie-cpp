@@ -142,3 +142,13 @@ a technique featured by:
   - `W` capacity
   - `S` sum of values of all items
   - [pseudo-polynomial](https://en.wikipedia.org/wiki/Pseudo-polynomial_time): running time in the *numeric value* of the input (not size)
+
+## string edit distance
+
+dynamic programing table index 0 and array index 0 -- different meaning
+
+- table index 0: empty string
+- array index 0: the first character
+- use `min({num1, ..., numk})` for a list of numbers
+
+- `(expr1 opr expr2 ? val1 : val2))`
