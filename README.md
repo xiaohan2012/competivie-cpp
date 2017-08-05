@@ -152,3 +152,12 @@ dynamic programing table index 0 and array index 0 -- different meaning
 - use `min({num1, ..., numk})` for a list of numbers
 
 - `(expr1 opr expr2 ? val1 : val2))`
+
+## count tilings
+
+- `string.find` and `string::npos`
+  - `s.find(ss) == string::npos`: `ss` NOT in `s`
+- `string.substr` vs `string.operator[]`: return `string` and `char`
+- `utility.h` gives `std::pair`
+
+- generating valid cartesian product (with constraints)
