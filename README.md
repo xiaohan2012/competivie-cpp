@@ -161,3 +161,9 @@ dynamic programing table index 0 and array index 0 -- different meaning
 - `utility.h` gives `std::pair`
 
 - generating valid cartesian product (with constraints)
+
+## learned from leetcode
+
+- sometimes, space complexity can be `O(1)`, for example:
+  - [maximum profit](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)  and [climb stairs](https://leetcode.com/problems/climbing-stairs/description/)
+  
