@@ -166,4 +166,26 @@ dynamic programing table index 0 and array index 0 -- different meaning
 
 - sometimes, space complexity can be `O(1)`, for example:
   - [maximum profit](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)  and [climb stairs](https://leetcode.com/problems/climbing-stairs/description/)
-  
+
+## range sum query
+
+[problem statement](https://leetcode.com/problems/range-sum-query-immutable/description/)
+
+
+# cpp class
+
+constructor function:
+
+    private:
+	type1 prop1;
+	type2 prop2;
+
+    ClassName(type1 param1, type1 param2): prop1(param1), prop2(param2){
+        ....
+    }
+
+
+note:
+
+- initialization using parameter list
+- order should obey the declaration order, `prop1` before `prop2`
