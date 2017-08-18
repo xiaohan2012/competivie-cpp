@@ -126,3 +126,66 @@ a technique featured by:
   - kinda of "common features" for linked cells
   - the storage is **linear** instead of quadratic (wow!)
 
+# pruning
+
+- 2d vector, example: `vector<vector<bool>> m(d, vector<bool>(d, false))`
+- [print stacktrace](https://stackoverflow.com/questions/18706496/can-one-use-libsegfault-so-to-get-backtraces-for-sigabrt) or [this for C](https://stackoverflow.com/questions/77005/how-to-generate-a-stacktrace-when-my-gcc-c-app-crashes)
+- tool gdb: `run` and `where` to print stacktrace
+- one cause for *segmentatio fault*: recursion does not terminate
+
+# dynamic programming
+
+- use `min/max` function to update
+- problem: path in a grid, initial state for first row and column
+- initialize 2d vectors with values: `vector<vector<int>> m {{...}, ..., {...}}
+- running time of dp for knapsack: `O(nW)` or `O(nS)`
+  - `W` capacity
+  - `S` sum of values of all items
+  - [pseudo-polynomial](https://en.wikipedia.org/wiki/Pseudo-polynomial_time): running time in the *numeric value* of the input (not size)
+
+## string edit distance
+
+dynamic programing table index 0 and array index 0 -- different meaning
+
+- table index 0: empty string
+- array index 0: the first character
+- use `min({num1, ..., numk})` for a list of numbers
+
+- `(expr1 opr expr2 ? val1 : val2))`
+
+## count tilings
+
+- `string.find` and `string::npos`
+  - `s.find(ss) == string::npos`: `ss` NOT in `s`
+- `string.substr` vs `string.operator[]`: return `string` and `char`
+- `utility.h` gives `std::pair`
+
+- generating valid cartesian product (with constraints)
+
+## learned from leetcode
+
+- sometimes, space complexity can be `O(1)`, for example:
+  - [maximum profit](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)  and [climb stairs](https://leetcode.com/problems/climbing-stairs/description/)
+
+## range sum query
+
+[problem statement](https://leetcode.com/problems/range-sum-query-immutable/description/)
+
+
+# cpp class
+
+constructor function:
+
+    private:
+	type1 prop1;
+	type2 prop2;
+
+    ClassName(type1 param1, type1 param2): prop1(param1), prop2(param2){
+        ....
+    }
+
+
+note:
+
+- initialization using parameter list
+- order should obey the declaration order, `prop1` before `prop2`
