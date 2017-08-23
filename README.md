@@ -189,3 +189,19 @@ note:
 
 - initialization using parameter list
 - order should obey the declaration order, `prop1` before `prop2`
+
+
+# graph
+
+## graph traversal
+
+review of `queue` and `stack`:
+
+- same: `push`, `pop`
+- diff: `queue.front`, `stack.pop`
+
+## when setting `z[i]=true`
+
+when push `i`, set it to `true`, otherwise, it can be visited multiple times.
+
+example: a triangle graph for dfs. 
