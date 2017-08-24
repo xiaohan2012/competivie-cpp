@@ -204,4 +204,9 @@ review of `queue` and `stack`:
 
 when push `i`, set it to `true`, otherwise, it can be visited multiple times.
 
-example: a triangle graph for dfs. 
+example: a triangle graph for dfs.
+
+## cycle detection
+
+`std:tie(i, j) = some pair`: unpack the value in pair
+`tie` defined in `tuple`
